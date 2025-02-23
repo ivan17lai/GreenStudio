@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Removal</title>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/selfie_segmentation@0.1/selfie_segmentation.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="left_bar">
+        <video id="videoElement" autoplay playsinline style="display: none;"></video>
+        <input type="file" id="background_update" accept="image/*" multiple style="display: none;">
+        <button class="button_add_image">
+            <span class="icon">+</span>
+        </button>
+        <canvas id="background_picture" style="display: none;"></canvas>
+        <div class="pictures">
+
+        </div>
+
+    </div>
+    
+    <div class="main_canvas">
+        <canvas id="outputCanvas"></canvas>
+    </div>
+
+    <script src="green.js"></script>
+    <script src="background.js"></script>
+    <script>
+        const add_button = document.querySelector('.button_add_image');
+        const input_vutton = document.querySelector('#background_update');
+        
+        add_button.addEventListener('click', () => {
+            input_vutton.click();
+        });
+    </script>
+
+
+</body>
+
+
+</html>
