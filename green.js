@@ -62,8 +62,7 @@ function onResults(results) {
         if (g > 100 && r < 100 && b < 100) {
             data[i+3] = 0; // 透明化該像素
         }else if (g > 150 && r < 120 && b < 120) {
-                data[i+3] = 0; // 透明化該像素
-            }
+            data[i+3] = 0; // 透明化該像素
         }
     }
     flippedCtx.putImageData(imageData, 0, 0);
@@ -72,6 +71,6 @@ function onResults(results) {
     outputCtx.clearRect(0, 0, outputCanvas.width, outputCanvas.height);
     outputCtx.drawImage(background_picture, 0, 0, outputCanvas.width, outputCanvas.height);
     outputCtx.drawImage(flippedCanvas, 0, 0);
-
+}
 
 videoElement.onplay = processFrame;
