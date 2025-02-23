@@ -72,6 +72,6 @@ function onResults(results) {
     outputCtx.clearRect(0, 0, outputCanvas.width, outputCanvas.height);
     outputCtx.drawImage(background_picture, 0, 0, outputCanvas.width, outputCanvas.height);
     outputCtx.drawImage(flippedCanvas, 0, 0);
-}
+
 
 videoElement.onplay = processFrame;
